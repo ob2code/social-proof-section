@@ -34,14 +34,26 @@ $letter-space: 0.3pt;
 
 $boder-radius: $text-sm;
 
+// 
+
+@mixin dynamic-bg {
+    animation-name: bg-animate;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    background-repeat: no-repeat;
+}
 
 // PAGE STYLES
 
 body {
-    background-image: url("../images/bg-pattern-top-desktop.svg"),url("../images/bg-pattern-bottom-desktop.svg");
-    background-position: top left, bottom right;
-    background-repeat: no-repeat;
+    // -- STATIC BACKGROUND --
+    // background-image: url("../images/bg-pattern-top-desktop.svg"),url("../images/bg-pattern-bottom-desktop.svg");
+    // background-position: top left, bottom right;
+    // background-repeat: no-repeat;
+    // -- ANIMATE BACKGROUND --
+    @include dynamic-bg();
     
+
     min-height: 100vh;
 
     display: grid;
@@ -52,7 +64,18 @@ body {
 
 }
 
-
+ 
+@keyframes bg-animate {
+    0%{
+        background-image: url("../images/bg-pattern-top-desktop.svg"),url("../images/bg-pattern-bottom-desktop.svg");
+        background-position: 0% -50%, 100% 300%;
+    }
+  
+    100% {
+        background-image: url("../images/bg-pattern-top-desktop.svg"),url("../images/bg-pattern-bottom-desktop.svg");
+        background-position: top left, bottom right;
+    }
+}
 
 
 #container{
@@ -181,8 +204,8 @@ main {
 .attribution {
     font-size: 11px;
     text-align: center;
-  }
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }

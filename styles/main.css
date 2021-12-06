@@ -155,8 +155,9 @@ h5,
 }
 
 body {
-  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-  background-position: top left, bottom right;
+  animation-name: bg-animate;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
   background-repeat: no-repeat;
   min-height: 100vh;
   display: grid;
@@ -165,6 +166,16 @@ body {
   font-family: "Spartan", sans-serif;
 }
 
+@keyframes bg-animate {
+  0% {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-position: 0% -50%, 100% 300%;
+  }
+  100% {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-position: top left, bottom right;
+  }
+}
 #container {
   max-width: 1440px;
   margin: 0 auto;
@@ -299,7 +310,6 @@ main {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: #3e52a3;
 }
