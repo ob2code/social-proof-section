@@ -46,7 +46,11 @@ Desktop version
 - SASS
 - Flexbox
 - CSS Grid: layout the main content and footer.
-- Mobile-first workflow
+
+### Improvement
+
+- Use CSS ::after Pseudo-Element for person's title
+- 
 
 ### Useful resources
 

@@ -180,7 +180,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   align-self: center;
-  padding: 1rem;
+  padding: 8vh 5vw;
 }
 
 main {
@@ -191,7 +191,7 @@ main {
   align-items: center;
   margin-bottom: 4rem;
 }
-@media (max-width: 46.5em) {
+@media (max-width: 60.25em) {
   main {
     display: block;
     text-align: center;
@@ -205,7 +205,7 @@ main {
   max-width: 480px;
   line-height: 1;
 }
-@media (max-width: 46.5em) {
+@media (max-width: 60.25em) {
   .main__content .headline {
     max-width: 100%;
     margin-top: 2rem;
@@ -217,7 +217,7 @@ main {
   color: #937b92;
   margin-top: 1rem;
 }
-@media (max-width: 46.5em) {
+@media (max-width: 60.25em) {
   .main__content .desc {
     max-width: 100%;
     margin: 2rem 0;
@@ -227,7 +227,7 @@ main {
 .rating {
   flex: 1;
 }
-@media (min-width: 47.5em) {
+@media (min-width: 61.25em) {
   .rating :nth-child(2) {
     margin-left: 3rem;
   }
@@ -249,7 +249,7 @@ main {
   margin-right: 1rem;
   vertical-align: middle;
 }
-@media (max-width: 46.5em) {
+@media (max-width: 60.25em) {
   .rating__item {
     max-width: 100%;
   }
@@ -267,7 +267,7 @@ main {
   align-items: center;
   gap: 2rem;
 }
-@media (max-width: 46.5em) {
+@media (max-width: 60.25em) {
   .card {
     display: block;
   }
@@ -305,9 +305,16 @@ main {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.namecard__header .title {
+.namecard__header .fullname::after {
+  content: "Verified Buyer";
+  font-size: 1rem;
+  font-weight: 400;
   color: #ee68a4;
   margin-top: 0.25rem;
+  display: block;
+}
+.namecard__header .title {
+  color: #ee68a4;
 }
 
 .attribution {
