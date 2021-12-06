@@ -194,7 +194,10 @@ main {
         border-radius: 50%;
         margin-right: $space-md;
     }
-    
+    .fullname{
+        font-size: $header5;
+        font-weight: $weight-medium;
+    }
     .title{
         color:$pri-soft;
         margin-top: $space-xs;
